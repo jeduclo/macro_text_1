@@ -12,7 +12,7 @@ from sim2 import run_sim2_app
 
 HTML_BANNER = """
     <div style="background-color:#464e5f;padding:10px;border-radius:10px">
-    <h1 style="color:white;text-align:center;">On National Accounts App</h1>
+    <h1 style="color:white;text-align:center;">National Output App</h1>
     </div>
     """
 stc.html(HTML_BANNER)
@@ -36,9 +36,6 @@ def run_home_app():
     We hope that this application provides valuable insights into the Expenditure-Output Model and helps you analyze GDP data effectively. Enjoy exploring the different sections and simulations!
 
     """)
-
-
-
 
 
 
