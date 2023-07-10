@@ -5,7 +5,7 @@ sns.set(color_codes=True)
 import numpy as np
 
 def run_sim_app():
-    st.subheader("Interactive Expenditure-Output Model with Taxation Amount")
+    st.subheader("Interactive Keynesian Equilibrium Plot-1")
 
     instructions_expander = st.expander("**Instructions**")
     with instructions_expander:
@@ -30,7 +30,7 @@ def run_sim_app():
         """)
 
     c0_expander = st.sidebar.expander("Autonomous Consumption")
-    c0 = c0_expander.slider("Autonomous Consumption", min_value=0, max_value=100, value=50, key='c0')
+    c0 = c0_expander.slider("Autonomous Consumption", min_value=0, max_value=100, value=100, key='c0')
 
     c1_expander = st.sidebar.expander("Marginal Propensity to Consume")
     c1 = c1_expander.slider("Marginal Propensity to Consume", min_value=0.0, max_value=1.0, value=0.5, step=0.1, key='c1')
@@ -43,7 +43,7 @@ def run_sim_app():
     I = I_expander.slider("Investment", min_value=10, max_value=100, value=50, key='I')
     
     G_expander = st.sidebar.expander("Government spending")
-    G = G_expander.slider("Government spending", min_value=10, max_value=100, value=20, key='G')
+    G = G_expander.slider("Government spending", min_value=10, max_value=100, value=50, key='G')
     
     NX_expander = st.sidebar.expander("Net exports")
     NX = NX_expander.slider("Net exports", min_value=10, max_value=100, value=50, key='NX')
