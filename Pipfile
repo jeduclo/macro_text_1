@@ -13,6 +13,9 @@ plotly-express = "*"
 scipy = "*"
 matplotlib = "*"
 seaborn = "*"
+pip = "*"
+install = "*"
+importlib-resources = "*"
 
 [dev-packages]
 
