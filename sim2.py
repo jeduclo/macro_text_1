@@ -103,3 +103,42 @@ def run_sim2_app():
     plt.grid(True)
 
     st.pyplot(plt.gcf())  # Display the plot in streamlit
+
+
+
+
+
+
+        # Create the plot
+    plt.figure(figsize=(10, 10))
+
+    # Income/output range
+    Y = np.linspace(0, 700, 100)
+    T = tax_rate * Y
+
+    # Calculate the components
+    C = c0 + c1 * (Y - T)
+    I_arr = np.full_like(Y, I)
+
+    # Calculate Savings
+    S = Y - C - G_arr
+
+    # Plot the lines
+    plt.plot(Y, S, label='Savings (S)')
+    plt.plot(Y, I_arr, label='Investment (I)')
+
+    # Calculate Equilibrium Point and Annotate
+    eq_x = np.interp(I, S[::-1], Y[::-1])
+    plt.annotate(f'Equilibrium (S = I)',
+                 (eq_x, I),
+                 textcoords="offset points", xytext=(-10,-10),
+                 ha='center', arrowprops=dict(facecolor='black', arrowstyle="->"))
+
+    plt.xlabel('Income / Output (Y)')
+    plt.ylabel('Savings / Investment')
+    plt.title('Savings-Investment vs Income')
+    plt.legend()
+    plt.grid(True)
+
+    st.pyplot(plt.gcf())  # Display the plot in streamlit
+
